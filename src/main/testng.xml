@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Suite" parallel="tests" thread-count="2">
+    <listeners>
+        <listener class-name = "inter.Listeners.DotTestsListener"/>
+    </listeners>
+    <test name="FirstThread">
+        <groups>
+            <define name="All">
+                <include name="Smoke"/>
+                <include name="Regression"/>
+            </define>
+            <run>
+                <include name="All" />
+            </run>
+        </groups>
+        <classes>
+            <class name="Tests.ComputerTest"/>
+        </classes>
+    </test>
+    <test name="SecondThread">
+        <groups>
+            <define name="All">
+                <include name="Smoke"/>
+                <include name="Regression"/>
+            </define>
+            <run>
+                <include name="All" />
+            </run>
+        </groups>
+        <classes>
+
+        </classes>
+    </test>
+</suite>

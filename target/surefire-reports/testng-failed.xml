@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]" parallel="tests">
+  <listeners>
+    <listener class-name="inter.Listeners.DotTestsListener"/>
+  </listeners>
+  <test thread-count="2" verbose="0" name="FirstThread(failed)" parallel="tests">
+    <groups>
+      <run>
+        <include name="All"/>
+        <include name="All"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="Tests.ComputerTest">
+        <methods>
+          <include name="Quit"/>
+          <include name="SetUp"/>
+          <include name="AddNewComputer"/>
+        </methods>
+      </class> <!-- Tests.ComputerTest -->
+    </classes>
+  </test> <!-- FirstThread(failed) -->
+</suite> <!-- Failed suite [Suite] -->
